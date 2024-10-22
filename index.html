@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
+      integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link rel="stylesheet" href="style.css" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@500&display=swap"
+      rel="stylesheet"
+    />
+
+    <title>Responsive Cart Page</title>
+  </head>
+  <body>
+    <!-- Header -->
+    <header>
+      <div class="container">
+        <!-- Logo Section -->
+        <div class="logo">
+          <img src="images/logo.png" alt="Marmeto" />
+          <div class="logo_name">
+            <p>Marmeto</p>
+          </div>
+        </div>
+
+        <!-- Toggle Button -->
+        <button class="toggle-button" aria-label="Toggle Navigation">
+          <span class="bar"></span>
+          <span class="bar"></span>
+          <span class="bar"></span>
+        </button>
+
+        <!-- Navigation Menu -->
+
+        <nav class="nav">
+          <ul>
+            <li><a href="#">Home</a></li>
+            <li><a href="#">Shop</a></li>
+            <li><a href="#">About</a></li>
+            <!-- Changed the duplicate Shop to About -->
+            <li><a href="#">Contact</a></li>
+          </ul>
+        </nav>
+        <!-- </div>
+    
+            <!-- Icons Section -->
+        <div class="icons">
+          <span class="search_icon">
+            <i class="fa-solid fa-magnifying-glass"></i>
+            <!-- Search icon -->
+          </span>
+          <span class="heart_icon">
+            <i class="fa-regular fa-heart"></i
+            ><!-- Cart icon -->
+          </span>
+          <span class="cart_icon">
+            <i class="fa-solid fa-cart-shopping"></i>
+          </span>
+        </div>
+      </div>
+
+      <div class="header-content">
+        <div class="header_text">
+          <img src="images/logo.png" alt="" />
+          <h1>Cart</h1>
+          <div class="breadcrumb"><a href="#">Home ></a> <span>Cart</span></div>
+        </div>
+      </div>
+    </header>
+
+    <!-- Cart Section -->
+    <section class="cart_container">
+      <!-- Cart Details Section -->
+      <div class="cart-items">
+        <table>
+          <thead>
+            <tr>
+              <th>Product</th>
+              <th>Price</th>
+              <th>Quantity</th>
+              <th>Subtotal</th>
+              <th></th>
+            </tr>
+          </thead>
+          <tbody id="product-data"></tbody>
+        </table>
+      </div>
+
+      <!-- Cart Totals Section -->
+      <div class="cart-totals">
+        <h3>Cart Totals</h3>
+        <div class="totals">
+          <span class="title">Subtotal</span>
+          <span class="price sub-total-price">Rs. 0</span>
+        </div>
+        <div class="totals">
+          <span class="title">Total</span>
+          <span class="total-price">Rs. 0</span>
+        </div>
+        <button>Check Out</button>
+      </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+      <div class="features-container">
+        <div class="feature-item">
+          <img
+            src="images/Group.png"
+            alt=""
+            style="
+              width: 35px;
+              height: 35px;
+              left: 3.61px;
+              gap: 0px;
+              opacity: 0px;
+              color: #242424;
+            "
+          />
+          <div class="feature-text">
+            <h4>High Quality</h4>
+            <p>crafted from top materials</p>
+          </div>
+        </div>
+
+        <div class="feature-item">
+          <img
+            src="images/Vector (3).png"
+            alt=""
+            style="
+              width: 35px;
+              height: 35px;
+              left: 3.61px;
+              gap: 0px;
+              opacity: 0px;
+              color: #242424;
+            "
+          />
+          <!-- <i class="fa fa-shield-alt"></i> -->
+          <div class="feature-text">
+            <h4>Warranty Protection</h4>
+            <p>Over 2 years</p>
+          </div>
+        </div>
+
+        <div class="feature-item">
+          <img
+            src="images/Vector (4).png"
+            alt=""
+            style="
+              width: 35px;
+              height: 35px;
+              left: 3.61px;
+              gap: 0px;
+              opacity: 0px;
+              color: #242424;
+            "
+          />
+          <!-- <i class="fa fa-shipping-fast"></i> -->
+          <div class="feature-text">
+            <h4>Free Shipping</h4>
+            <p>Order over 150 $</p>
+          </div>
+        </div>
+
+        <div class="feature-item">
+          <img
+            src="images/customer-support.png"
+            alt=""
+            style="
+              width: 35px;
+              height: 35px;
+              left: 3.61px;
+              gap: 0px;
+              opacity: 0px;
+              color: #242424;
+            "
+          />
+          <!-- <i class="fa fa-headset"></i> -->
+          <div class="feature-text">
+            <h4>24 / 7 Support</h4>
+            <p>Dedicated support</p>
+          </div>
+        </div>
+      </div>
+    </footer>
+
+    <script src="script.js"></script>
+  </body>
+</html>

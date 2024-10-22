@@ -1,0 +1,456 @@
+html,
+body {
+  height: 100%;
+  width: 100%;
+  margin: 0;
+}
+
+/* Flexbox container for header layout */
+.container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px;
+}
+
+/* Logo container */
+.logo {
+  display: flex;
+  align-items: center;
+  gap: 5px; /* Space between the logo image and the company name */
+  opacity: 1;
+}
+
+/* Styling for logo text (company name) */
+.logo_name p {
+  font-family: "Montserrat", sans-serif;
+  font-size: 34px;
+  font-weight: 700;
+  line-height: 41.45px;
+  text-align: left;
+  margin: 0;
+}
+
+.toggle-button {
+  display: none; /* Hide by default */
+  flex-direction: column;
+  margin-left: 30em;
+  cursor: pointer;
+}
+
+.toggle-button .bar {
+  width: 25px;
+  height: 3px;
+  background-color: #000;
+  margin: 4px 0;
+}
+
+.nav {
+  display: flex; /* Default for desktop */
+}
+
+/* Navigation menu */
+nav ul {
+  list-style: none;
+  text-decoration: none;
+  display: flex;
+  gap: 40px;
+  padding: 0;
+  margin: 0;
+  width: 430px;
+  height: 24px;
+  top: 38px;
+  left: 505px;
+  opacity: 0px;
+}
+
+nav ul li a {
+  text-decoration: none;
+  color: #000000;
+  font-family: "Poppins", sans-serif;
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 24px;
+  text-align: left;
+}
+
+.icons {
+  position: relative;
+  left: -2em;
+  gap: 2em;
+  display: flex;
+}
+
+.header-content {
+  background-image: url("images/Rectangle 1.png");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  height: 376px;
+  width: 100%;
+  max-width: 1440px;
+  margin: 0 auto;
+
+  /* Flexbox for centering */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative; /* Ensure the child element is properly positioned */
+}
+
+.header_text {
+  text-align: center;
+}
+
+.breadcrumb {
+  margin-top: 10px;
+}
+
+.breadcrumb a {
+  color: #000000;
+  text-decoration: none;
+  font-family: Poppins;
+  font-size: 16px;
+  font-weight: bold;
+  line-height: 24px;
+  text-align: left;
+}
+
+.breadcrumb a:hover {
+  text-decoration: underline;
+}
+
+.breadcrumb span {
+  font-family: Poppins;
+  text-align: left;
+}
+
+.header_text h1 {
+  font-family: Poppins;
+  font-size: 48px;
+  font-weight: 500;
+  line-height: 10px;
+  text-align: left;
+}
+
+/* Container that holds the cart details and cart totals */
+.cart_container {
+  /* border: 2px solid red; */
+  display: flex;
+  justify-content: space-between;
+  max-width: 1200px;
+  margin: 50px auto;
+  /* padding: 20px; */
+  background-color: white;
+  padding-left: 5em;
+  padding-right: 5em;
+  border-radius: 8px;
+}
+
+/* Cart details table section */
+.cart-items {
+  flex: 2;
+  background-color: #fff;
+  padding: 0px 20px;
+  border-radius: 5px;
+}
+.cart-totals {
+  flex: 1;
+  background-color: #faf6f2;
+  padding: 20px;
+  border-radius: 5px;
+}
+table {
+  width: 100%;
+  border-collapse: collapse;
+}
+th,
+td {
+  font-family: "Poppins", sans-serif;
+  padding: 10px;
+  text-align: left;
+  border-bottom: 1px solid #eee;
+}
+th {
+  background-color: #f9f1e7;
+  font-size: 16px;
+  font-weight: 500;
+  color: #333;
+  /* background-color: #faf6f2; */
+}
+
+/* Styling for the product image */
+.cart-items td img {
+  width: 60px;
+  height: auto;
+  border-radius: 8px;
+  background-color: #f4e6e6;
+  flex-shrink: 0;
+}
+
+.product-cell {
+  vertical-align: middle;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.product-image {
+  width: 80px;
+  height: 80px;
+  object-fit: cover;
+}
+
+/* Styling for table headers and cells */
+
+td {
+  font-size: 10px; /* Adjusted to improve readability */
+  line-height: 24px;
+  color: #9f9f9f;
+  padding: 10px;
+  /* align-items: center; */
+}
+
+/* Quantity input field styling */
+.quantity-input {
+  width: 35px;
+  text-align: center;
+  border: 1px solid #ccc; /* Adds border for clarity */
+  border-radius: 5px; /* Rounded corners */
+}
+
+input[type="number"]::-webkit-outer-spin-button,
+input[type="number"]::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+.btn {
+  border: none;
+  background-color: #b88e2f;
+  border-radius: 4px;
+  text-align: center;
+}
+
+/* Delete icon styling */
+.cart-items .remove-icon {
+  cursor: pointer;
+  color: #b88e2f;
+  font-size: 18px;
+}
+
+/* Cart totals section */
+.cart-totals {
+  width: 25%;
+  padding: 20px;
+  background: #f9f1e7;
+  /* border-radius: 8px; */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Title in the cart totals section */
+.cart-totals h3 {
+  font-size: 1.5em;
+  margin-bottom: 20px;
+  font-family: "Poppins", sans-serif;
+  color: #333;
+  text-align: center;
+}
+
+/* Totals and prices in the cart totals section */
+.cart-totals .totals {
+  /* border: 2px solid red; */
+  width: 60%;
+  display: flex;
+  justify-content: space-between;
+  gap: 50px;
+  margin-bottom: 20px;
+}
+
+.totals .title {
+  font-family: Poppins;
+  font-size: 14px;
+  text-align: left;
+}
+
+.cart-totals .totals .price {
+  color: gray;
+  font-family: Poppins;
+  font-size: 12px;
+}
+
+.cart-totals .total-price {
+  color: #b88e2f;
+  font-family: Poppins;
+  font-size: 12px;
+}
+
+/* Check-out button styling */
+.cart-totals button {
+  width: 70%;
+  /* text-align: center; */
+  padding: 10px 5px 10px 5px;
+  /* margin-left: 30px; */
+  margin: 0px auto;
+  font-size: 15px;
+  border: 1px solid #000;
+  border-radius: 10px;
+  cursor: pointer;
+  font-family: "Poppins", sans-serif;
+  background-color: #f9f1e7;
+}
+
+.cart-totals button:hover {
+  background-color: #f7f7f7;
+}
+
+/* Container for all the feature items */
+.features-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 0 auto;
+  padding: 20px;
+  background-color: #faf3e8;
+  border-radius: 8px;
+}
+
+/* Individual feature item */
+.feature-item {
+  display: flex;
+  align-items: center;
+  gap: 15px; /* Space between the icon and text */
+  text-align: left;
+  flex: 1; /* Flex property to evenly space items */
+  padding: 10px;
+}
+
+/* Feature icon */
+.feature-item i {
+  font-size: 32px; /* Adjust the size of the icons */
+  color: #000; /* Icon color */
+}
+
+/* Text section for each feature */
+.feature-text h4 {
+  font-size: 16px;
+  font-weight: 600;
+  margin-bottom: 5px;
+  font-family: Poppins;
+  line-height: 5px;
+}
+
+.feature-text p {
+  font-size: 11px;
+  color: #898989;
+  font-family: Poppins;
+}
+
+.feature-item:hover {
+  background-color: #f0e7db;
+  border-radius: 8px;
+  transition: background-color 0.3s ease;
+}
+
+/* Media Queries for Responsiveness */
+
+/* For tablets and smaller devices */
+@media (max-width: 768px) {
+  .container,
+  .cart_container,
+  .features-container {
+    flex-direction: column;
+    padding: 10px;
+  }
+
+  .toggle-button {
+    display: flex; /* Show toggle button on small screens */
+  }
+
+  .nav {
+    display: none;
+    flex-direction: column;
+    width: 100%;
+    background-color: #fff;
+  }
+
+  .nav.active {
+    display: flex;
+  }
+
+  nav ul {
+    flex-direction: column;
+    gap: 20px;
+    align-items: center;
+    justify-items: center;
+  }
+
+  .header_text h1 {
+    font-size: 36px;
+  }
+
+  .cart-details {
+    width: 100%;
+  }
+
+  .cart-totals {
+    width: 106%;
+    margin-top: 20px;
+  }
+
+  .icons {
+    display: flex;
+    flex-direction: column;
+    margin-right: 15em;
+  }
+
+  /* Container for all the feature items */
+  .features-container {
+    width: 113%;
+  }
+}
+
+/* For mobile devices */
+@media (max-width: 480px) {
+  .logo_name p {
+    font-size: 24px;
+  }
+
+  .header-content {
+    height: 250px;
+    width: 117%;
+  }
+
+  .header_text h1 {
+    font-size: 28px;
+  }
+
+  nav ul {
+    gap: 10px;
+  }
+
+  .cart-totals button {
+    width: 80%;
+  }
+
+  .feature-item i {
+    font-size: 24px;
+  }
+
+  .feature-text h4 {
+    font-size: 14px;
+  }
+
+  .feature-text p {
+    font-size: 10px;
+  }
+
+  .icons {
+    display: flex;
+    flex-direction: column;
+    margin-right: 15em;
+  }
+}
